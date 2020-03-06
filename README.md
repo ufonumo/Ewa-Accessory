@@ -1,2 +1,8 @@
 # Ewa-Accessory
-A e-commerce website for earrings, necklace, rings, anklets, etc
+An e-commerce website for earrings, necklace, rings, anklets, etc
+
+# Built using
+Html
+CSS
+Bootstrap
+Javascript

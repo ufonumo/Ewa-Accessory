@@ -1,0 +1,246 @@
+ /* Import fonts */
+ @import url('https://fonts.googleapis.com/css?family=Lato|PT+Sans|Poppins|Princess+Sofia&display=swap');
+
+:root{
+    --primary-color:#e5df45;
+    --light-gray:#030303a1;
+    --border:#2b303218;
+    --text-color:#ff686b;
+    --poppins:"Poppins", sans-serif;
+    --lato:'Lato', sans-serif;
+    --sofia: 'Princess Sofia', cursive;
+    --sans: 'PT Sans', sans-serif;
+    --secondary-color:#faf562;
+    --light:white;
+}
+
+.primary-color{
+    color: var(--primary-color);
+}
+
+.bg-primary-color{
+    background-color: var(--primary-color) !important ;
+}
+
+.text-color{
+    color:var(--text-color);
+}
+.font-poppins{
+    font-family: var(--poppins);
+}
+
+.lightblue
+{
+    color: lightblue ;
+}
+
+
+/* SIDEBAR */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 260px;
+    position: fixed;
+    top: -50;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.sidebar-header{
+    font-family: sans-serif;
+    line-height: 3rem;
+    margin-left: 0.6rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.fa-angle-right{
+   padding-right: 1rem;
+    padding-top: .6rem;
+    float: right;
+}
+
+.img-icon{
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    text-decoration: none !important;
+}
+
+.img-icon:hover{
+    border-bottom: 5px solid var(--border);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.img-icon a{
+    color: var( --light-gray);
+    text-decoration: none !important;
+    list-style: none;
+    letter-spacing: .1rem;
+}
+.img-icon a img{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.left{
+    margin-left: 8rem !important;
+    margin-top: 2rem;
+}
+
+.img-fluid{
+    transform: translateZ(-1rem) scale(1);
+    backface-visibility: hidden;
+    transition: all .5s;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width:600px){ 
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+    
+
+.left{
+    margin-left: 1rem !important;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#sidebar{
+    width: 200px;
+    position: relative;
+    top: -50;
+    left: 0;
+    height: 100vh;
+}
+
+
+.img-icon a{
+    color: var( --light-gray);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.sidebar-header h3{
+    margin-left: 0.1rem;
+    font-size: 1rem !important;
+    margin-right: .3rem;
+}
+
+.img-icon a img{
+    padding-left: .3rem;
+    padding-right: .3rem;   
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .left{
+        padding-left: 8rem;
+    }
+
+    
+.img-icon a img{
+    padding-left: 1rem;
+    padding-right: 1rem;   
+    font-size: 3rem;
+}
+
+.sidebar-header h3{
+    margin-left: 0.1rem;
+    font-size: 2rem !important;
+    margin-right: .3rem;
+}
+
+.img-icon a{
+    color: var( --light-gray);
+    font-size: 2rem;
+}
+
+}
+
+
+.img-text{
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+    box-decoration-break: clone;
+    text-align: center;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+    font-family: var(--lato);
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+    
+}
+
+.img-text .text{
+    padding-top: .7rem;
+    font-size: 1.5rem;
+}
+
+.img-text .btn-text{
+    font-family: var(--lato);
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    background-color: var(--light);
+    border: none;
+}
+
+/* Hover */
+
+.img-text .btn-text:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3) ;
+    transform: translateY(-3px);
+}
+
+.img-text .btn-text:visited{
+    transition: all .2s;
+    position: relative;
+}
+
+.img-text .btn-text:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3) ;
+}
+
+.img-text .btn-text::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.d-block:hover .img-text{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.d-block:hover .img-fluid{
+    transform: translateZ(-3rem) scale(.9);
+    filter: blur(3px) brightness(80%);
+}
